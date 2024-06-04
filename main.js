@@ -28,15 +28,16 @@ function changeSelectedHue(direction) {
 function changeSelectedItem(e) {
     const targetRect = e.target.getBoundingClientRect()
     const posY =  e.clientY - targetRect.top
+    const relative = parseInt(posY / targetRect.height * 100)
 
 
-    if (posY < 118) {
+    if (relative < 18) {
         selectedItem = document.querySelector("#cap")
         selectedString = "cap"
-    } else if (posY > 230 && posY < 450){
+    } else if (relative > 36 && relative < 70){
         selectedItem = document.querySelector("#shirt")
         selectedString = "shirt"
-    } else if (posY > 450 && posY < 600) {
+    } else if (relative > 69 && relative < 93) {
         selectedItem = document.querySelector("#pants")
         selectedString = "pants"
     } else {
@@ -45,6 +46,6 @@ function changeSelectedItem(e) {
     }
 
 
-    document.querySelector("#pol").innerHTML = selectedString + " at " + posY
+    document.querySelector("#pol").innerHTML = selectedString + " at " + relative
     console.log(e.clientY - targetRect.top);
 }

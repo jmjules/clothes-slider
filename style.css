@@ -27,9 +27,9 @@ header #pol {
 
 .img-wrapper {
     margin: 0 auto;
-    /* max-width: 70vw; */
+    max-width: 90vw;
     aspect-ratio: 1;
-    height: 70vh;
+    max-height: 70vh;
     position: relative;
 }
 
@@ -62,10 +62,10 @@ header #pol {
     font-weight: 600;
 }
 .img-wrapper #left {
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
     
 }
 .img-wrapper #right {
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
     right: 0;
 }
