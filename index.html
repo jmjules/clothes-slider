@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gltf in browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Customize!</h1>
+        <p id="pol"></p>
+    </header>
+
+    <main>
+        <div class="img-wrapper">
+          <img src="models/base.png" onclick="changeSelectedItem(event)" >
+          <img id="pants" src="models/pants.png" onclick="changeSelectedItem(event)" >
+          <img id="shirt" src="models/shirt.png" onclick="changeSelectedItem(event)">
+          <img id="cap" src="models/cap.png" onclick="changeSelectedItem(event)" >
+          <button id="left" onclick="changeSelectedHue('left')" ><</button>
+          <button id="right" onclick="changeSelectedHue('right')" >></button>
+        </div>
+
+        
+    </main>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
